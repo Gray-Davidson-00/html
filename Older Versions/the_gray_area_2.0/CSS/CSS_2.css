@@ -1,0 +1,254 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a:link {color: rgb(153,162,173);}      /* unvisited link */
+a:visited {color: rgb(153,162,173);}   /* rgb(46,60,76) visited link */
+a:hover {color: rgb(255,255,255);}  /* mouse over link */
+
+
+#normal_body {
+	padding: 40px 0;
+	background: rgb(20,20,25) url(images/background_gradient.jpg) repeat-x;
+	
+	
+}
+/* previous background color = 167,172,181 */
+
+
+
+/* Header 1*/
+
+#header1 {
+	padding: 0px 15px 0px 0px;
+	width: 760px;
+	height: 0px;
+	margin: 0 auto;
+	background: url(images/header1.png) no-repeat;
+}
+
+#banner {	
+	padding: 0px 0px 0px 550px;
+	font-size: 30px;
+	color: rgb(113,122,133);
+
+	
+}
+
+
+/* Menu */
+
+#menu {
+	width: 760px;
+	height: 10px;
+	margin: 0 auto;
+	background: url(images/menu1.png) no-repeat;
+	padding: 0px 0px 10px 0px;
+	
+}
+
+
+#menu ul {
+	margin: 0;
+	padding: 21px 0 0 30px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	float: left;
+	padding: 0 20px 0 22px;
+	background: url(images/img03.gif) no-repeat left center;
+	
+}
+
+#menu li.first {
+	background: none;
+}
+
+#menu a {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(153,162,173);
+	
+}
+
+/* Line (still needs work */
+  #line {
+    position:absolute; /* doesn't have to be absolute */
+    z-index: -1;         /* places the line behind other elements */
+  }
+ 
+  #line div {
+    position:absolute;
+    left: 0px; top: 0px;
+    border-left-color: transparent;
+    border-style: solid;
+  }
+  
+  /* Search */
+
+#search {
+	float: right;
+	width: 227px;
+}
+
+#search fieldset {
+	border: none;
+}
+
+#search input {
+	float: left;
+}
+
+#search #s {
+	width: 136px;
+	margin-right: 7px;
+	padding: 2px 5px;
+}
+
+#search #x {
+	background: none;
+	border: none;
+}
+
+
+#center_space {
+	padding: 0px 8px 8px 0px;
+	width: 696px;
+	/* height: 1922px; */
+	margin: 0 auto;
+	float: left;
+	color: rgb(113,122,133);
+	background: url(images/center_space.png) no-repeat;
+}
+
+
+/* iframe */
+
+#fire_iframe {
+	scrolling: yes;
+	padding: 0px 0px 0px 53px;
+	float: left;
+	width: 696px;
+	height: 490px;
+	margin: 0 auto;
+	color: rgb(153,162,173);
+	font-size:14px;
+	font-weight: bold;	
+	frameborder: 1;
+	border: 0;
+	background-image: none;
+}
+
+
+
+#in_frame_p {
+	padding: 0px 40px 0px 0px;
+	float: left;
+	background: none;
+	color: rgb(153,162,173);
+	font-size:14px;
+	font-weight: bold;	
+
+	
+}
+#hline {
+width: 612px;
+padding: 0px 0px 0px 0px;
+
+}
+
+
+
+#in_frame_head   {
+	padding: 0px 11px 0px 0px;
+	color: rgb(153,162,173);
+	font-size:20px;
+	font-weight: bold;	
+	background: none;
+	float: right;
+	
+}
+
+#in_frame_head_2   {
+	padding: 0px 11px 0px 0px;
+	color: rgb(153,162,173);
+	font-size:30px;
+	font-weight: bold;	
+	background: none;
+	float: right;
+	
+}
+
+#iframe_body   {
+	padding: 0px 0px;
+	background: none;
+	width: 500;
+}
+
+#center_space_triple_image   {
+	padding: 0px 0px 0px 12px;
+	width:200;
+	float:left;
+	border:1px solid #021a40;
+	
+	
+	
+}
+
+#inframe_image {
+	width: 300px;
+	border:1px solid #021a40;
+	float: center;
+	
+}
+
+
+/* 3-picture-spread */
+
+div.float_art {
+	float: left;
+	padding: 0px 20px 0px 0px;
+}
+  
+div.float_art p {
+   	text-align: center;
+   	padding: 0px 20px 0px 20px;
+   	color: rgb(153,162,173);
+
+}
+
+
+div.container_art {
+  	padding: 0px 0px 0px 0px;
+  	background: none;
+}
+
+div.spacer_art {
+  	clear: both;
+}
+
+
+/*   Fire */
+
+#content_p_first_fire {
+ 	padding: 0px 0px 0px 0px;
+	float: left;
+	margin: 0 auto;
+	
+
+	
+	
+/*	background: url(file:///Users/Requiem/Documents/Gray%20Studying%20html/the_gray_area_2.0/Fire/Fire/images/img10.png)no-repeat;    */
+}
+#content_p_first_fire_2 {
+ 	padding: 0px 20px 0px 52px;
+	float: left;
+	margin: 0 auto;
+	height: 4px;   
+	
+}

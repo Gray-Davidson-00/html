@@ -1,0 +1,354 @@
+
+* {
+	margin: 0;
+	padding: 0;
+/*	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important; */
+
+}
+
+a:link {color: rgb(153,162,173);}      /* unvisited link */
+a:visited {color: rgb(153,162,173);}   /* rgb(46,60,76) visited link */
+a:hover {color: rgb(255,255,255);}  /* mouse over link */
+
+
+#normal_body {
+	padding: 40px 0;
+	background: rgb(40,40,45) url(images/background_gradient.jpg) repeat-x;
+	min-width: 750px;
+
+}
+/* previous background color = 167,172,181 */
+
+
+
+/* Header 1*/
+
+#header1 {
+	padding: 0px 15px 0px 0px;
+	width: 100%;
+	height: 0px;
+	margin: 0 auto;	
+}
+
+#banner {	
+	padding: 0px 30px 0px 0px;
+	font-size: 30px;
+	color: rgb(113,122,133);
+	float: right;
+
+	
+}
+
+
+/* Menus */
+
+#menu1 {
+	width: 100%;
+	height: 10px;
+	margin: 0 auto;
+	background: url(images/menu1.png) no-repeat;
+	padding: 0px 0px 10px 0px;
+	float: left;
+	
+}
+
+
+#menu1 ul {
+	margin: 0;
+	padding: 10px 0 0 30px;
+	list-style: none;
+	float: left;
+}
+
+#menu1 li {
+	float: left;
+	padding: 0 20px 0 10px;
+
+}
+
+#menu1 a {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(153,162,173);
+	float: left;
+	
+}
+
+
+
+#menu2 {
+	width: 100%;
+	height: 10px;
+	margin: 0 auto;
+	background: url(images/menu1.png) no-repeat;
+	padding: 0px 0px 10px 0px;
+	float: left;
+	
+}
+
+
+#menu2 ul {
+	margin: 0;
+	padding: 10px 0 0 30px;
+	list-style: none;
+	float: left;
+}
+
+#menu2 li {
+	float: left;
+	padding: 0 20px 0 10px;
+
+}
+
+#menu2 a {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(153,162,173);
+	float: left;
+	
+}
+
+
+
+#menu3 {
+	width: 100%;
+	height: 0px;
+	margin: 0 auto;
+	padding: 0px 0px 0px 0px;
+	float: left;
+	
+}
+
+
+#menu3 ul {
+	margin: 0;
+	padding: 10px 0 0 30px;
+	list-style: none;
+	float: left;
+}
+
+#menu3 li {
+	float: left;
+	padding: 0 20px 0 10px;
+
+}
+
+#menu3 a {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(153,162,173);
+	float: left;
+	
+}
+
+/* Line (still needs work */
+  #line {
+    position:absolute; /* doesn't have to be absolute */
+    z-index: -1;         /* places the line behind other elements */
+  }
+ 
+  #line div {
+    position:absolute;
+    left: 0px; top: 0px;
+    border-left-color: transparent;
+    border-style: solid;
+  }
+  
+
+#center_space {
+	padding: 0px 8px 8px 0px;
+	width: 100%;
+	/* height: 1922px; */
+	margin: 0 auto;
+	float: left;
+	color: rgb(113,122,133);
+	background: url(images/center_space.png) no-repeat;
+}
+
+
+/* iframe */
+
+#fire_iframe {
+	scrolling: yes;
+	padding: 0px 30px 0px 53px;
+	float: left;
+	width: 100%;
+	height: 490px;
+	margin: 0 auto;
+	color: rgb(153,162,173);
+	font-size:14px;
+	font-weight: bold;	
+	frameborder: 1;
+	border: 0;
+	background-image: none;
+}
+
+
+
+#in_frame_p {
+	padding: 0px 40px 0px 0px;
+	float: left;
+	background: none;
+	color: rgb(153,162,173);
+	font-size:14px;
+	font-weight: bold;	
+
+	
+}
+#hline {
+width: 512px;
+padding: 30px 0px 0px 40px;
+float: left;
+
+
+}
+
+}
+#hline_short {
+width: 312px;
+padding: 0px 0px 0px 0px;
+
+}
+
+
+
+#in_frame_head   {
+	padding: 0px 30px 0px 0px;
+	color: rgb(153,162,173);
+	font-size:20px;
+	font-weight: bold;	
+	background: none;
+	float: right;
+	
+}
+
+#in_frame_head_2   {
+	padding: 0px 11px 0px 0px;
+	color: rgb(153,162,173);
+	font-size:30px;
+	font-weight: bold;	
+	background: none;
+	float: right;
+	
+}
+
+#iframe_body   {
+	padding: 0px 0px;
+	background: none;
+	width: 100%;
+}
+
+#center_space_triple_image   {
+	padding: 0px 0px 0px 12px;
+	width:200;
+	float:left;
+	border:1px solid #021a40;
+	
+	
+	
+}
+
+#inframe_image {
+	width: 300px;
+	border:1px solid #021a40;
+	float: center;
+	
+}
+
+
+/*   Fire */
+
+#content_p_first_fire {
+ 	padding: 0px 0px 0px 0px;
+	float: left;
+	margin: 0 auto;
+	
+
+	
+	
+/*	background: url(file:///Users/Requiem/Documents/Gray%20Studying%20html/the_gray_area_2.0/Fire/Fire/images/img10.png)no-repeat;    */
+}
+#content_p_first_fire_2 {
+ 	padding: 0px 20px 0px 52px;
+	float: left;
+	margin: 0 auto;
+	height: 4px;   
+	
+}
+
+
+/* i-frame columns */
+
+
+#wrap {
+   width:85%;
+   margin:0 auto;
+   	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(153,162,173);
+ 	padding: 0px 0px 0px 0px;
+
+}
+
+
+#column2 {
+   float:left;
+   width:100%;
+   	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(153,162,173);
+	padding: 0px 0px 0px 0px;
+
+}
+
+#column3 {
+   float:left;
+   width:100%;
+   	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(153,162,173);
+	padding: 0px 0px 0px 0px;
+
+}
+
+#column3 p {
+   float:center;
+   width:85%;
+   	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(153,162,173);
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+
+
+}
+
+#column4 {
+   float:right;
+   width:240px;
+   	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(153,162,173);
+ 	padding: 0px 0px 0px 0px;
+}
+
+
+#topspace {
+	float: left;
+	width: 600px;
+	height: 40px;
+}
+
+#youtubes   {
+	padding: 0px 0px;
+	background: none;
+	width: 85%;
+}

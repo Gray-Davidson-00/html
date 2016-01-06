@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- This is how to comment -->
+<h1>Welcome to the Gray Area</h1>
+
+<!-- These are horizontal lines: -->
+<hr />
+<hr />
+
+<p>Nothing is true. Everything is permitted.</p>
+
+<!-- These are carriage returns: -->
+<br />
+<br />
+
+<a href="http://www.antoineart.com" title="An incredible figure artist, from South Africa">Antoine de Villiers</a>
+
+
+<img src="w3schools.jpg" width="104" height="142" />
+
+
+</body>
+</html>

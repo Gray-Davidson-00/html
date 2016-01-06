@@ -1,0 +1,33 @@
+body
+{
+font-size:75%;
+font-family:verdana,arial,'sans serif';
+background-image:url('file:///Users/Requiem/Documents/Gray%20Studying%20html/W3schools/Faye_Valentine_by_NDL.jpeg');
+background-repeat:repeat-x;
+background-color:#b0c4de;
+color:#000080;
+margin:70px;
+}
+
+.primary {text-align:left; color:blue;}
+
+.secondary {text-align:center; color:yellow;}
+
+p {color:red;text-align:left;}
+
+
+
+#para1
+{
+text-align:right;
+color:black;
+}
+
+#para3
+{
+text-align:right;
+color:green;
+}
+
+
+

@@ -1,0 +1,444 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\ql\qnatural
+
+\f0\fs20 \cf0 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\
+<html>\
+<head>\
+\
+<style type="text/css">\
+/* Circle Text Styles */\
+#outerCircleText \{\
+/* Optional - DO NOT SET FONT-SIZE HERE, SET IT IN THE SCRIPT */\
+font-style: italic;\
+font-weight: bold;\
+font-family: 'comic sans ms', verdana, arial;\
+color: white;\
+/* End Optional */\
+\
+/* Start Required - Do Not Edit */\
+position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;\}\
+#outerCircleText div \{position: relative;\}\
+#outerCircleText div div \{position: absolute;top: 0;left: 0;text-align: center;\}\
+/* End Required */\
+/* End Circle Text Styles */\
+</style>\
+<script type="text/javascript">\
+\
+/* Circling text trail- Tim Tilton\
+   Website: http://www.tempermedia.com/\
+   Visit: http://www.dynamicdrive.com/ for Original Source and tons of scripts\
+   Modified Here for more flexibility and modern browser support\
+   Modifications as first seen in http://www.dynamicdrive.com/forums/\
+   username:jscheuer1 - This notice must remain for legal use\
+   */\
+\
+;(function()\{\
+\
+// Florida Breaks (QUOTED STRING)\
+var msg = "FLORIDA BREAKS";\
+\
+/* THE REST OF THE EDITABLE VALUES BELOW ARE ALL UNQUOTED NUMBERS */\
+\
+// Set font's style size for calculating dimensions\
+// Set to number of desired pixels font size (decimal and negative numbers not allowed)\
+var size = 24;\
+\
+// Set both to 1 for plain circle, set one of them to 2 for oval\
+// Other numbers & decimals can have interesting effects, keep these low (0 to 3)\
+var circleY = 0.75; var circleX = 2;\
+\
+// The larger this divisor, the smaller the spaces between letters\
+// (decimals allowed, not negative numbers)\
+var letter_spacing = 5;\
+\
+// The larger this multiplier, the bigger the circle/oval\
+// (decimals allowed, not negative numbers, some rounding is applied)\
+var diameter = 10;\
+\
+// Rotation speed, set it negative if you want it to spin clockwise (decimals allowed)\
+var rotation = 0.4;\
+\
+// This is not the rotation speed, its the reaction speed, keep low!\
+// Set this to 1 or a decimal less than one (decimals allowed, not negative numbers)\
+var speed = 0.3;\
+\
+////////////////////// Stop Editing //////////////////////\
+\
+if (!window.addEventListener && !window.attachEvent || !document.createElement) return;\
+\
+msg = msg.split('');\
+var n = msg.length - 1, a = Math.round(size * diameter * 0.208333), currStep = 20,\
+ymouse = a * circleY + 20, xmouse = a * circleX + 20, y = [], x = [], Y = [], X = [],\
+o = document.createElement('div'), oi = document.createElement('div'),\
+b = document.compatMode && document.compatMode != "BackCompat"? document.documentElement : document.body,\
+\
+mouse = function(e)\{\
+ e = e || window.event;\
+ ymouse = !isNaN(e.pageY)? e.pageY : e.clientY; // y-position\
+ xmouse = !isNaN(e.pageX)? e.pageX : e.clientX; // x-position\
+\},\
+\
+makecircle = function()\{ // rotation/positioning\
+ if(init.nopy)\{\
+  o.style.top = (b || document.body).scrollTop + 'px';\
+  o.style.left = (b || document.body).scrollLeft + 'px';\
+ \};\
+ currStep -= rotation;\
+ for (var d, i = n; i > -1; --i)\{ // makes the circle\
+  d = document.getElementById('iemsg' + i).style;\
+  d.top = Math.round(y[i] + a * Math.sin((currStep + i) / letter_spacing) * circleY - 15) + 'px';\
+  d.left = Math.round(x[i] + a * Math.cos((currStep + i) / letter_spacing) * circleX) + 'px';\
+ \};\
+\},\
+\
+drag = function()\{ // makes the resistance\
+ y[0] = Y[0] += (ymouse - Y[0]) * speed;\
+ x[0] = X[0] += (xmouse - 20 - X[0]) * speed;\
+ for (var i = n; i > 0; --i)\{\
+  y[i] = Y[i] += (y[i-1] - Y[i]) * speed;\
+  x[i] = X[i] += (x[i-1] - X[i]) * speed;\
+ \};\
+ makecircle();\
+\},\
+\
+init = function()\{ // appends message divs, & sets initial values for positioning arrays\
+ if(!isNaN(window.pageYOffset))\{\
+  ymouse += window.pageYOffset;\
+  xmouse += window.pageXOffset;\
+ \} else init.nopy = true;\
+ for (var d, i = n; i > -1; --i)\{\
+  d = document.createElement('div'); d.id = 'iemsg' + i;\
+  d.style.height = d.style.width = a + 'px';\
+  d.appendChild(document.createTextNode(msg[i]));\
+  oi.appendChild(d); y[i] = x[i] = Y[i] = X[i] = 0;\
+ \};\
+ o.appendChild(oi); document.body.appendChild(o);\
+ setInterval(drag, 25);\
+\},\
+\
+ascroll = function()\{\
+ ymouse += window.pageYOffset;\
+ xmouse += window.pageXOffset;\
+ window.removeEventListener('scroll', ascroll, false);\
+\};\
+\
+o.id = 'outerCircleText'; o.style.fontSize = size + 'px';\
+\
+if (window.addEventListener)\{\
+ window.addEventListener('load', init, false);\
+ document.addEventListener('mouseover', mouse, false);\
+ document.addEventListener('mousemove', mouse, false);\
+  if (/Apple/.test(navigator.vendor))\
+   window.addEventListener('scroll', ascroll, false);\
+\}\
+else if (window.attachEvent)\{\
+ window.attachEvent('onload', init);\
+ document.attachEvent('onmousemove', mouse);\
+\};\
+\
+\})();\
+\
+</script>\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+<meta name="GENERATOR" content="PageBreeze Free HTML Editor (http://www.pagebreeze.com)">\
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" >\
+<title>Techno - Breaks - Trance - DNB - Happy hardcore</title>\
+<style>\
+a.navwhite:link \{ text-decoration: none; color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 10px; font-weight: bold; \}\
+a.navwhite:visited \{ text-decoration: none; color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 10px; font-weight: bold; \}\
+a.navwhite:hover \{ text-decoration: underline; color: #ffffff; font-family: Verdana, Arial, sans-serif; font-size: 10px; font-weight: bold; \}\
+a.navblack:link \{ text-decoration: none; color: #000000; font-family: Verdana, Arial, sans-serif; font-size: 10px; font-weight: bold; \}\
+a.navblack:visited \{ text-decoration: none; color: #000000; font-family: Verdana, Arial, sans-serif; font-size: 10px; font-weight: bold; \}\
+a.navblack:hover \{ text-decoration: underline; color: #000000; font-family: Verdana, Arial, sans-serif; font-size: 10px; font-weight: bold; \}\
+\
+h1 \{ font-family: Arial, sans-serif; font-size: 30px; color: #004080;\}\
+h2 \{ font-family: Arial, sans-serif; font-size: 18px; color: #004080;\}\
+\
+body,p,b,i,em,dt,dd,dl,sl,caption,th,td,tr,u,blink,select,option,form,div,li \{ font-family: Arial, sans-serif; font-size: 12px; \}\
+\
+h1 \{ font-family: Arial, sans-serif; font-size: 30px; \}\
+h2 \{ font-family: Arial, sans-serif; font-size: 18px; \}\
+\
+body,p,b,i,em,dt,dd,dl,sl,caption,th,td,tr,u,blink,select,option,form,div,li \{ font-family: Arial, sans-serif; font-size: 12px; \}\
+\
+</style>\
+\
+</head>\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+<body bgcolor="#cecece" topmargin="0" leftmargin="0" rightmargin="0">\
+<p><strong></strong>&nbsp;</p><strong>\
+<p>\
+\
+<table cellspacing="0" cellpadding="3" width="100%" align="center" border="0" bgcolor="#0000a0">\
+  <tbody>\
+  \
+  <tr>\
+      <td bgcolor="#000000">\
+      <p align="center"><font color="#c0c0c0" size="2" \
+      ><font color="#c0c0c0" size="2" \
+      ></font><font face="Verdana"><font \
+      size=1><strong>&nbsp;</strong><a href="default.htm" ><font \
+      size=3><strong>Home</strong></font></a><font><font \
+      ><font><font face="Arial" \
+      ><font size="3"><font color="#c0c0c0" \
+      >&nbsp;&nbsp;</font><font color="#ffffff" \
+      > | </font></font></font></font></font></font><font \
+      size=3><strong>&nbsp;<font color="#ffffff"><a href="history.html" >History</a></font></strong></font><font \
+      ><font><font \
+      ><font size="3"><font face="Arial" color="#c0c0c0" \
+      >&nbsp;&nbsp;</font><font color="#ffffff" \
+      ><font face="Arial"> |&nbsp;&nbsp;</font><font \
+      face=Verdana><a href="Original_Tracks.htm" ><strong>Original \
+      Tracks</strong> </a></font></font></font></font><font color="#ffffff" \
+      ><font face="Arial"><font size="3" \
+      >&nbsp; |&nbsp;&nbsp;</font><font size="5"> \
+      </font></font><a href="Biography.htm" ><font face="Verdana" size="3" \
+      ><strong>Bio</strong></font></a><font \
+      ><font><font size="3" \
+      ><font face="Arial" color="#c0c0c0" \
+      >&nbsp;&nbsp;</font><font color="#ffffff" \
+      ><font face="Arial"> |&nbsp;&nbsp;</font><font \
+      face=Verdana><a href="Links_.htm" ><strong>Links</strong> \
+      </a></font></font></font><font color="#ffffff"><font \
+      face=Arial><font size="3">&nbsp; |&nbsp;</font><font \
+      size=5> </font></font><a href="Contact_info.htm" ><font face="Verdana" size="3" \
+      ><strong>Contact</strong></font></a><font \
+      ><font><font face="Arial" \
+      color=#c0c0c0 size=3>&nbsp;&nbsp;</font><font \
+      color=#ffffff><font face="Arial"><font size="3" \
+      > |&nbsp;&nbsp;</font><font size="5"> \
+      </font></font><font face="Verdana"><a \
+      href="http://www.orbitalgrooves.com"><font size="3" \
+      ><strong>Radio</strong></font></a></font></font></font></font></font></font></font></font></font></font></font></font></font></p>\
+      </td></tr>\
+  <tr>\
+      <td bgcolor="#000000">\
+      <p align="center"><font \
+      color=#ffffff size=5 \
+     >Breakbeat History         </font></p><strong>\
+      <p align="center"><img \
+      style="WIDTH: 254px; HEIGHT: 173px" height=225 hspace=0 \
+      src="Ampthitheater.jpg" width=356 border=0></p>\
+      <p align="center">&nbsp;</p></strong></td></tr>\
+  \
+  <tr>\
+      <td bgcolor="#000000">\
+   \
+      <table cellspacing="0" cellpadding="8" width="874" align="center" border="0" style="WIDTH: 874px; HEIGHT: 1103px">\
+        <tbody>\
+        \
+        <tr>\
+          <td BGCOLOR  =#000000 V>\
+            <p>\
+            <table cellspacing="1" cellpadding="6" width="211" align="left" \
+            bgColor=#8080ff border=0 \
+            style="WIDTH: 211px; HEIGHT: 848px">\
+              \
+              <tr>\
+                <td bgcolor="#000000">\
+                  <p align="center"><font \
+                  color=#ffffff><strong>FLORIDA \
+                  BREAKS!</strong> </font> </p></td></tr>\
+              <tr>\
+                  <td bgcolor="#000000">\
+                  <p align="left"><font color="#ffffff"><img \
+                  style="WIDTH: 194px; HEIGHT: 413px" height=600 hspace=0 \
+                  src="450px-Oragami_star.jpg" width=450 border=0></font></p>\
+                  <p align="left"><font color="#ffffff">Florida \
+                  breaks, also referred to as Florida breakbeat, Funky Breaks, \
+                  and Tampa Breaks, is a genre of breakbeat music which, as the \
+                  name suggests, is most popular in the areas around the US \
+                  state of Florida. Florida breaks were popular in the club \
+                  culture of the southeast US during the mid and late 90's to \
+                  early 2000s. Its sound at that time was described as 'funky' \
+                  and often included recognizable samples from 80's pop, funk, \
+                  and hiphop. Its current sound has a lot in common with nu \
+                  skool breaks although it is also influenced by other music \
+                  popular in the same area such as freestyle, electro and Miami \
+                  bass. More recently Floridians have taken to calling the genre \
+                  electro breaks despite the lack of electro characteristics \
+                  included in the tracks, but this is most likely due to the \
+                  parallel electronic dance music sub-genre of electro bass \
+                  being billed at many of the same events as Florida \
+                  breaks.</font></p>\
+                  <p align="left"><font color="#ffffff">Some of \
+                  the more well known artists associated with Florida breaks \
+                  are: <em>DJ Icey, DJ Baby Anne, Eric Berretta, Friction and \
+                  Spice, Huda Hudia, Infiniti, DJ Sharaz, Fixx, DJ X, Dave \
+                  London, Tony Faline, Mike &amp; Charlie, DJ \
+                  Mondo.</em></font></p>\
+                  <p align="left" \
+            >&nbsp;</p></td></tr></table></p>\
+                  <p align="center"><font \
+                  color=#ffffff><strong>\
+            <table cellspacing="1" cellpadding="6" width="211" align="left" \
+            bgColor=#8080ff border=0 \
+            style="WIDTH: 211px; HEIGHT: 789px">\
+              \
+              <tr>\
+                <td bgcolor="#000000">\
+                  <p align="center"><font \
+                  color=#ffffff><strong>Are you a \
+                  Raver?</strong> </font> </p></td></tr>\
+              <tr>\
+                  <td bgcolor="#000000">\
+                  <p align="left"><font color="#ffffff"><img \
+                  style="WIDTH: 196px; HEIGHT: 216px" height=356 hspace=0 \
+                  src="Oragamilights.JPG" width=463 border=0></font></p>\
+                  <p align="left"><font \
+                  color=#ffffff>A&nbsp;candy raver (most commonly called a \
+                  "Kandi Kid" or "Candee child", "kandy raver") is a rave \
+                  attendee who exchanges or shares small gifts, primarily beads, \
+                  necklaces, toys, bracelets, or stickers.</font></p>\
+                  <p align="left"><font color="#ffffff">Candy \
+                  ravers are most widely known (and sometimes identified) by \
+                  their brightly coloured style which is very similar to the \
+                  Harajuku style in Japan. Almost all can be spotted wearing a \
+                  large number of homemade bracelets of plastic beads, known as \
+                  "kandi". The bracelets are often given as gifts to remember \
+                  past raves and commemorate new friendships. They are often \
+                  found wearing bright clothing, hair extensions or hair falls, \
+                  fake dreadlocks, childish attire, chew toys laced on string \
+                  around their necks, fuzzy leg warmers, hair clips and a lot of \
+                  bright make up. most are well known for their ecstasy use and \
+                  "glowsticking".</font></p>\
+                  <p align="left"><font \
+                  color=#ffffff></font>&nbsp;</p>\
+                  <p align="left" \
+            ><br>&nbsp;</p></td></tr></table></strong> </font> </p>\
+            <p>\
+            <table cellspacing="1" cellpadding="6" width="203" align="left" \
+            bgColor=#8080ff border=0 \
+            style="WIDTH: 203px; HEIGHT: 1081px">\
+              \
+              <tr>\
+                <td bgcolor="#000000">\
+                  <p align="center"><font \
+                  color=#ffffff><strong>GlowSticking!</strong> </font> </p></td></tr>\
+              <tr>\
+                  <td bgcolor="#000000">\
+                  <p align="left">\
+                  <p align="left"><font color="#ffffff"><img \
+                  style="WIDTH: 189px; HEIGHT: 220px" height=378 hspace=0 \
+                  src="glow1.JPG" width=357 border=0></font></p>\
+                  <p align="left"><font color="#ffffff">Some \
+                  ravers participate in one of two light-oriented dances, called \
+                  glowsticking and glowstringing, also known as "lightshows". \
+                  Glowsticks (or "light sticks") purportedly soothe the \
+                  unfavorable side effects of ecstasy, such as muscle tension. \
+                  Therefore at some rave places they are presented as "safety \
+                  materials." The sale of glowsticks during rave parties has \
+                  been presented as evidence of illegal drug use.</font></p>\
+                  <p align="left"><font color="#ffffff">Other \
+                  types of lightshows include LED lights, flashlights and \
+                  blinking strobe lights. LEDs come in various colors with \
+                  different settings. The "low intensity" setting causes a \
+                  strobe effect, leaving trails of dots, while "high intensity" \
+                  leaves a solid line. The most common LED lights at parties are \
+                  iNova micro lights, Raven, and X-Photon. There are many \
+                  techniques used to make the lights "flow" with the music in \
+                  order to "trip" the person who is receiving. The most basic \
+                  lightshow move is the figure-eight followed by the circle. \
+                  There are also combination methods where the lightshower holds \
+                  a glowstick in each hand as well as LED lights.</font></p>\
+                  <p align="left"><font \
+                  color=#ffffff>Regardless, glowsticks and LEDs can be used at \
+                  raves for interesting dance effects, because most raves \
+                  (except some open air raves, e.g. technoparades) are held in \
+                  dark or nearly dark rooms. Because rave parties are popular \
+                  with people who wish to show off their dancing, glowsticks can \
+                  be an ancillary material for creative freestyle dance. LED's \
+                  and glowsticks now not only show up at most every rave event, \
+                  but also are becoming more prominent at many techno and \
+                  electro clubs.<br></font></p>\
+                  <p></p></td></tr></table> \
+            </p>\
+            <p>\
+            <table cellspacing="1" cellpadding="6" width="224" align="left" \
+            bgColor=#8080ff border=0 \
+            style="WIDTH: 224px; HEIGHT: 737px">\
+              \
+              <tr>\
+                <td bgcolor="#000000">\
+                  <p align="center"><font \
+                  color=#ffffff><strong>The Breakbeat \
+                  DJ</strong> </font> </p></td></tr>\
+              <tr>\
+                  <td bgcolor="#000000">\
+                  <p align="left"><font \
+                  color=#ffffff></font></p>\
+                  <p align="left">f<font color="#ffffff"><img \
+                  style="WIDTH: 205px; HEIGHT: 313px" height=588 hspace=0 \
+                  src="wallpaper_8375.jpg" width=773 border=0></font></p>\
+                  <p align="left"><font color="#ffffff">A \
+                  record (also known as phonograph record, or simply wax) is an \
+                  analog sound storage medium consisting of a flat disc with an \
+                  inscribed modulated spiral groove usually starting near the \
+                  periphery and ending near the centre of the disc. When made of \
+                  polyvinyl chloride they are also known as vinyl \
+                  records.</font></p>\
+                  <p align="left"><font color="#ffffff">Records were the primary \
+                  medium used for commercial music reproduction for most of the \
+                  20th century. They replaced the phonograph cylinder as the \
+                  most popular recording medium in the 1900s, and although they \
+                  were supplanted in popularity in the late 1980s by digital \
+                  media, leaving mainstream by 1991, they continue to be \
+                  manufactured and sold as of 2009[update], still used by DJs \
+                  and audiophiles for certain types of music, especially \
+                  electronic dance music, hip hop, punk rock, and especially \
+                  techno.</font></p>\
+                  <p align="left"><font color="#ffffff"></font>&nbsp;</p>\
+                  <p align="left"><font \
+                  color=#ffffff>&nbsp;&nbsp;&nbsp;</font>&nbsp;</p></td></tr></table>&nbsp;&nbsp; \
+            </p>\
+            <p> \
+            </p>\
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; \
+            </p>\
+            <p> \
+            </p>\
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \
+            </p>\
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \
+            </p>\
+            <p> \
+            </p>\
+                <td >\
+            <h2><strong><strong><br>\
+                  <p align="center"><font \
+                  color=#ffffff><strong></strong> </font> </p> </h2><font \
+            color=#ffffff>\
+                  <p align="center"><font \
+                  color=#ffffff><strong></strong> </font> </p></font>\
+            <p><font color="#ffffff"></font>&nbsp;</p>\
+            <p><font color="#ffffff"></font>&nbsp;</p>\
+            <p><font \
+            color=#ffffff></font>&nbsp;</p></strong></strong></td></tr></tbody></table>\
+<p align="center"><img \
+      style="WIDTH: 1052px; HEIGHT: 202px" height=768 hspace=0 src="towers.jpg" \
+      width=1024 border=0></p></td></tr></tbody></table></p>\
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></strong>\
+</body>\
+</html>}
